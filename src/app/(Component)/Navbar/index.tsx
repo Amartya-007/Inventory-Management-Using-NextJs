@@ -7,7 +7,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div className={`flex justify-between items-center w-full mb-7 `}>
-      {/* Left */}
+      {/* Left side */}
 
       <div className={`flex items-center justify-between gap-5`}>
         <button
@@ -24,17 +24,18 @@ const Navbar = () => {
             className="pl-10 pr-4 py-2 w-50 md:w-80 border-2 border-gray-300
           bg-white rounded-lg focus:outline-none
           focus:border-blue-500
-          focus:ring-blue-500 focus:border-transparent"
+          focus:ring-1 focus:ring-blue-500"
           />
           <div className="absolute left-0 inline-flex items-center pl-3 inset-y-0 pointer-events-none">
             <Bell className="text-gray-500" size={20} />
           </div>
         </div>
       </div>
-      {/* Right */}
+
+      {/* Right side */}
 
       <div className={`flex items-center justify-between gap-5`}>
-        <div className="hidden md:flex       justify-between items-center gap-5">
+        <div className="hidden md:flex justify-between items-center gap-5">
           <div>
             <button onClick={() => {}}>
               <Sun className="cursor-pointer text-gray-500" size={24} />
