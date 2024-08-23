@@ -1,9 +1,21 @@
 "use client";
 import React from "react";
+import { useAppDispatch, useAppSelector } from "@/app/redux";
+import { Menu } from "lucide-react";
 
 const Sidebar = () => {
+  const dispatch = useAppDispatch();
+  const isSidebarCollapsed = useAppSelector(
+    (state) => state.global.isSidebarCollapsed
+  );
+
+  const toggleSidebar = () => {
+    dispatch({ type: "TOGGLE_SIDEBAR" });
+  };
+
   return (
     <div>
+      {/*  top logo */}
       <div className="flex gap-3 justify-between md:justify-normal items-center pt-8">
         <div>logo</div>
         <h1 className="font-extrabold text-2xl">MarketWave</h1>
